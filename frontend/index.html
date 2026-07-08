@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Peru Adventure Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HERO BANNER -->
+
+    <div class="hero-banner">
+
+        <div class="hero-overlay">
+
+            <h1>🏔️ Peru Adventure Guide</h1>
+
+            <p>
+                Explore the legendary Inca Trail and discover Machu Picchu.
+            </p>
+
+            <button id="theme-toggle" onclick="toggleTheme()">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- JOURNEY TRACKER -->
+
+        <div class="journey-tracker">
+
+            <div id="step-cusco" class="step active">
+                Cusco
+            </div>
+
+            <div class="line"></div>
+
+            <div id="step-trailhead" class="step">
+                Trailhead
+            </div>
+
+            <div class="line"></div>
+
+            <div id="step-winay_wayna" class="step">
+                Wiñay Wayna
+            </div>
+
+            <div class="line"></div>
+
+            <div id="step-machu_picchu" class="step">
+                Machu Picchu
+            </div>
+
+        </div>
+        <div class="progress-container">
+
+    <div class="progress-header">
+        Journey Progress
+    </div>
+
+    <div class="progress-bar">
+
+        <div
+            id="progress-fill"
+            class="progress-fill">
+        </div>
+
+    </div>
+
+    <p id="progress-text">
+        0% Complete
+    </p>
+
+</div>
+
+        <!-- TRAVEL INFO -->
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>🌡 Temperature</h3>
+                <p id="temp">15°C</p>
+            </div>
+
+            <div class="info-card">
+                <h3>📍 Altitude</h3>
+                <p id="altitude">2430 m</p>
+            </div>
+
+            <div class="info-card">
+                <h3>⛰ Difficulty</h3>
+                <p id="difficulty">Easy</p>
+            </div>
+
+            <div class="info-card">
+                <h3>💡 Travel Tip</h3>
+                <p id="tip">Carry enough drinking water.</p>
+            </div>
+
+        </div>
+
+        <!-- CURRENT STATUS -->
+
+        <div class="status-card">
+
+            <h2>Current Status</h2>
+
+            <p id="location">
+                Location: Loading...
+            </p>
+
+            <p id="permit">
+                Permit: Loading...
+            </p>
+
+        </div>
+        <div class="visited-panel">
+
+    <h2>✅ Visited Locations</h2>
+
+    <ul id="visited-list">
+
+        <li>None yet</li>
+
+    </ul>
+
+</div>
+
+        <!-- LOCATION IMAGE -->
+
+        <div class="location-image-card">
+
+            <h2>Current Location</h2>
+
+            <img
+                id="location-image"
+                src="images/cusco.jpg"
+                alt="Location Image">
+
+        </div>
+
+        <!-- GUIDE NARRATION -->
+
+        <div class="narration-panel">
+
+            <h2>Guide Narration</h2>
+
+            <p id="guide-text">
+                Welcome Traveller...
+            </p>
+
+        </div>
+        <!-- CONTEXT ACTION CHIPS -->
+
+<div class="chips-panel">
+
+    <h2>✨ Suggested Actions</h2>
+
+    <div id="action-chips">
+
+    </div>
+
+</div>
+
+        <!-- ADVENTURE LOG -->
+
+        <div class="journal-panel">
+
+            <h2>📖 Adventure Log</h2>
+
+            <ul id="journal-list">
+
+                <li>Journey started in Cusco...</li>
+
+            </ul>
+
+        </div>
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="actions">
+
+            <button onclick="getPermit()">
+                🎫 Get Permit
+            </button>
+
+            <button onclick="moveLocation()">
+                🚶 Move Forward
+            </button>
+
+            <button onclick="getGuide()">
+                🤖 Guide Advice
+            </button>
+
+            <button onclick="resetJourney()">
+                🔄 Reset
+            </button>
+
+        </div>
+        <div class="voice-panel">
+
+    <h2>🎤 Voice Assistant</h2>
+
+    <button onclick="startRecording()">
+        Start Recording
+    </button>
+
+    <button onclick="stopRecording()">
+        Stop Recording
+    </button>
+
+    <p id="voice-status">
+        Ready to record...
+    </p>
+
+</div>
+
+        <!-- AI CHAT -->
+
+        <div class="chat-container">
+
+            <h2>🤖 Peru Travel Assistant</h2>
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="bot-message">
+                    Welcome traveller! Ask me anything about Peru.
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Ask about Peru...">
+
+                <button onclick="askQuestion()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

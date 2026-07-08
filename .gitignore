@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Audio output
+audio/
+output.wav
+
+# Chroma database
+chroma_db/
+
+# Build logs
+build_log.txt
+
+# Test files (optional)
+test_stt.py
+test_tts.py
+
+# Extra requirements file
+requirements_new.txt
+
+# Windows recordings
+Sound Recordings/
+Sound Recordings - Copy/
+
+# OS files
+.DS_Store
+Thumbs.db
